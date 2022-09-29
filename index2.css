@@ -46,6 +46,35 @@ body {
   width: 250px;
   height: 100%;
 }
+.link-div {
+  width: 100%;
+  height: 40px;
+  background-color: aliceblue;
+  margin-top: 10px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+.link-div a {
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  z-index: 3;
+}
+.link-div-2 {
+  position: absolute;
+  top: 51px;
+  width: 1%;
+  height: 40px;
+  background: -webkit-linear-gradient(right, rgb(92, 108, 214), rgb(158, 8, 8));
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.link-div:hover .link-div-2 {
+  color: white;
+  width: 100%;
+}
 
 .sidenav {
   height: 100%;
@@ -59,33 +88,13 @@ body {
   transition: 0.7s ease-in-out;
   overflow-x: hidden;
 }
-.kutu1 {
-  width: 100%;
-  height: 40px;
-  border: none;
-  background-color: rgb(226, 32, 32);
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 0 #f9e506;
-  transition: 0.3s ease-out;
-  font-size: 2rem;
-  outline: none;
-  float: top;
-}
-.kutu1 a {
-  text-align: center;
-  text-decoration: none;
-  color: #f1f1f1;
-}
-.kutu1:hover {
-  box-shadow: inset 300px 0 0 0 #f9e506;
-  cursor: pointer;
-}
-
 .sidenav .close {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 45px;
+  text-decoration: none;
+  color: #f1f1f1;
 }
 .open {
   font-size: 30px;
@@ -109,8 +118,27 @@ body {
 .main {
   position: relative;
   top: 0px;
-  height: 900px;
+  width: auto;
+  height: auto;
   background-color: #111;
+}
+.textarea {
+  position: absolute;
+  width: 20%;
+  height: 500px;
+  border-radius: 10px;
+  margin-left: 15px;
+  background-color: #111;
+  z-index: 10;
+  float: left;
+  transition: all 0.7s ease-in-out;
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 18px;
+}
+.right {
+  top: 0px;
+  left: 1150px;
 }
 .main.reveal {
   background-color: #111;
@@ -238,4 +266,23 @@ body {
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background: #f35911;
+}
+
+.icerik2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 500px;
+  background-color: #f35911;
+  margin: auto;
+  overflow: hidden;
+}
+.box {
+  width: 294px;
+  height: 100%;
+  float: left;
+  border: 1px solid #111;
+  background-color: #f9e506;
+  border-radius: 10px;
 }
