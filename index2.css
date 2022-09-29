@@ -1,0 +1,241 @@
+body {
+  background-color: #111;
+  padding: 0 0 0 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bos {
+  width: 100%;
+  height: 750px;
+  background-image: url("eye\ of\ god.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.metin {
+  position: relative;
+  top: 250px;
+  width: 100%;
+  height: 50%;
+  font-size: 72px;
+  background: -webkit-linear-gradient(left, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-weight: bold;
+}
+.metin2 {
+  width: 100%;
+  position: relative;
+  background: -webkit-linear-gradient(right, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  top: 45px;
+  font-size: 72px;
+  text-align: center;
+}
+.sidemenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  background-color: #111;
+  z-index: 100;
+  transition: 0.7s ease-in-out;
+  overflow-x: hidden;
+}
+.kutu1 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: rgb(226, 32, 32);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: 0.3s ease-out;
+  font-size: 2rem;
+  outline: none;
+  float: top;
+}
+.kutu1 a {
+  text-align: center;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.kutu1:hover {
+  box-shadow: inset 300px 0 0 0 #f9e506;
+  cursor: pointer;
+}
+
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+.open {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  color: #f1f1f1;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.7s ease-in;
+}
+.reveal.passive {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.7s ease-in;
+}
+.main {
+  position: relative;
+  top: 0px;
+  height: 900px;
+  background-color: #111;
+}
+.main.reveal {
+  background-color: #111;
+}
+.icerik {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+}
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+.module-border-wrap {
+  max-width: 800px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+}
+
+.module {
+  background: -webkit-linear-gradient(right, rgb(25, 42, 154), rgb(158, 8, 8));
+  color: white;
+  padding: 3px;
+  width: 800px;
+  margin: auto;
+  border-radius: 10px;
+}
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #f35911;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #f35911;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #f35911;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #f35911;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #f35911;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #f35911;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #f35911;
+}

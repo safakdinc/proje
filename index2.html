@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="index2.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <span class="open" id="open" onclick="opennav()">&#9776;</span>
+    <div class="bos" id="bos">
+      <div class="metin">
+        Bir Yerlerde İnanılmaz Bir Şey Keşfedilmeyi Bekliyor
+      </div>
+      <div class="metin2">-Carl Sagan</div>
+    </div>
+    <div class="sidemenu">
+      <div class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="close" onclick="closenav()"
+          >&times;</a
+        >
+        <div class="kutu1"><a href="#">Ana Menü</a></div>
+        <div class="kutu1"><a href="#">Ana Menü</a></div>
+        <div class="kutu1"><a href="#">Ana Menü</a></div>
+        <div class="kutu1"><a href="#">Ana Menü</a></div>
+      </div>
+    </div>
+    <div class="main reveal" id="main">
+      <div class="icerik">
+        <div class="module-border">
+          <div class="module">
+            <div class="slider">
+              <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+
+                <div class="slide first">
+                  <img src="foto.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="indir.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="indir2.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="indir4.jpg" alt="" />
+                </div>
+
+                <div class="navigation-auto">
+                  <div class="auto-btn1"></div>
+                  <div class="auto-btn2"></div>
+                  <div class="auto-btn3"></div>
+                  <div class="auto-btn4"></div>
+                </div>
+              </div>
+
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          var counter = 1;
+          setInterval(function () {
+            document.getElementById("radio" + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+              counter = 1;
+            }
+          }, 5000);
+        </script>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", reveal);
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+
+          if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add("active");
+            reveals[i].classList.remove("passive");
+          } else {
+            reveals[i].classList.remove("active");
+            reveals[i].classList.add("passive");
+          }
+        }
+      }
+      const slider = document.getElementById("slider");
+      slider.addEventListener("mouseover", (event) => {
+        slider.classList.add("paused");
+
+        console.log(event);
+      });
+      function opennav() {
+        document.getElementById("open").style.display = "none";
+        document.getElementById("open").style.marginLeft = "250px";
+        document.getElementById("open").style.transition = "0.7s ease-in-out";
+        document.getElementById("sidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("main").style.transition = "0.7s ease-in-out";
+        document.getElementById("bos").style.marginLeft = "250px";
+        document.getElementById("bos").style.opacity = "0.5";
+        document.getElementById("bos").style.transition = "0.7s";
+        document.body.style.backgroundColor = "rgba(17,17,17,1)";
+        document.body.style.transition = "0.7s";
+      }
+      function closenav() {
+        document.getElementById("open").style.display = "block";
+        document.getElementById("open").style.marginLeft = "0px";
+        document.getElementById("open").style.transition = "0.7s ease-in-out";
+        document.getElementById("sidenav").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+        document.getElementById("main").style.transition = "0.7s ease-in-out";
+        document.getElementById("bos").style.marginLeft = "0px";
+        document.getElementById("bos").style.opacity = "1";
+        document.getElementById("bos").style.transition = "0.7s";
+        document.body.style.backgroundColor = "rgba(17,17,17,1)";
+        document.body.style.transition = "0.7s";
+      }
+    </script>
+  </body>
+</html>
