@@ -84,27 +84,53 @@
         molestias repellendus! Eius?
       </div>
 
+      <div class="header reveal">Kategoriler</div>
+
       <div class="icerik2 reveal" id="icerik2">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box">
+          <div class="baslik"><a href="#">Astronomi</a></div>
+        </div>
+        <div class="box">
+          <div class="baslik"><a href="#">Biyoloji</a></div>
+        </div>
+        <div class="box">
+          <div class="baslik"><a href="#">Fizik</a></div>
+        </div>
+        <div class="box">
+          <div class="baslik"><a href="#">Felsefe</a></div>
+        </div>
+        <div class="box">
+          <div class="baslik"><a href="#">Teknoloji</a></div>
+        </div>
       </div>
     </div>
 
+    <div class="header reveal">En Son İçerikler</div>
+
+    <div class="onerilenler reveal">
+      <div class="makale"></div>
+      <div class="makale"></div>
+      <div class="makale"></div>
+      <div class="makale"></div>
+      <div class="makale"></div>
+    </div>
+
     <script type="text/javascript">
-      const boxes = document.querySelectorAll(".box");
-      for (const box of boxes) {
-        box.addEventListener("mouseover", function (e) {
-          box.style.transition = "0.7s";
-          box.style.width = "335px";
-        });
-        box.addEventListener("mouseout", function (e) {
-          box.style.width = "294px";
-          box.style.transition = "0.7s";
-        });
+      let collection = document.getElementsByClassName("box");
+
+      for (let i = 0; i < collection.length; i++) {
+        console.log(collection[i]);
+        collection[i].addEventListener("mouseover", transform);
+        function transform() {
+          collection[i].classList.add("transform");
+        }
+
+        collection[i].addEventListener("mouseout", transformx);
+        function transformx() {
+          collection[i].classList.remove("transform");
+        }
       }
+
       var counter = 1;
       setInterval(function () {
         document.getElementById("radio" + counter).checked = true;
@@ -152,7 +178,7 @@
         document.getElementById("textarea").style.width = "15%";
         document.getElementById("textarea right").style.width = "15%";
         document.getElementById("textarea right").style.left = "1017px";
-        document.getElementById("icerik2").style.marginLeft = "251px";
+        document.getElementById("icerik2").style.marginLeft = "240px";
         document.getElementById("icerik2").style.transition = "0.7s";
       }
       function closenav() {
