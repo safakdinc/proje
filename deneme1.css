@@ -1,0 +1,356 @@
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 3px;
+  background: -webkit-linear-gradient(left, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  width: 0%;
+}
+.progress_margin {
+  position: relative;
+  top: 45px;
+}
+
+.row {
+  --bs-gutter-x: 0rem;
+}
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.7s ease-in;
+}
+.reveal.passive {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.7s ease-in;
+}
+/*Görünmez Sütunları ekran dışına it*/
+.width0 {
+  margin-left: -45vw;
+  transition: all 0.7s ease-in;
+}
+.width1 {
+  width: 0px;
+  transition: all 0.7s ease-in-out;
+}
+.sınır {
+  border-right: 1px solid rgb(255, 255, 255);
+}
+.kutu {
+  height: 100vh;
+  background-color: rgb(27, 28, 28);
+  color: aliceblue;
+}
+.kutu2 {
+  height: 1500px;
+  width: 100%;
+}
+.transition {
+  transition: all 0.7s ease-in-out;
+}
+/*top navbar*/
+.head {
+  height: 46px;
+  background-color: rgba(27, 28, 28, 1);
+}
+.menu_btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: aliceblue;
+  top: 0;
+  margin-left: 10px;
+  transition: all 0.4s ease-in-out;
+}
+.index1 {
+  z-index: 998;
+}
+.index2 {
+  z-index: 999;
+}
+.closenav {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 85%;
+  z-index: 999;
+}
+.show {
+  display: show;
+}
+.hide {
+  margin-left: -10vw;
+  position: fixed;
+}
+/*sidenav header*/
+header {
+  text-align: center;
+  color: azure;
+}
+/*sidenav ana kapsayıcı*/
+.kapsayıcı {
+  margin-top: 20px;
+  text-align: center;
+  height: 50vw;
+  overflow-y: scroll;
+}
+#ul {
+  height: 0px;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  transition: height 0.4s ease;
+}
+.kapsayıcı ul {
+  list-style: none;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.kapsayıcı ul li {
+  height: 45px;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.kapsayıcı ul li {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(
+      to right,
+      rgba(193, 198, 198, 1),
+      rgba(193, 198, 198, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.kapsayıcı ul li:hover {
+  background-size: 0 3px, 100% 3px;
+}
+.kapsayıcı ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.kapsayıcı ul li a:hover {
+  color: rgb(82, 99, 106);
+}
+.dropdown {
+  border: 0px;
+  font-size: 24px;
+  color: aliceblue;
+  width: 100%;
+  height: 40px;
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(
+      to right,
+      rgba(193, 198, 198, 1),
+      rgba(193, 198, 198, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+.dropdown:hover {
+  background-size: 0 3px, 100% 3px;
+  color: rgb(82, 99, 106);
+  cursor: pointer;
+}
+.dropdown ul {
+  display: none;
+  list-style-type: circle;
+}
+.dropdown-sc ul li {
+  background-color: #858585;
+}
+.dropdown-sc ul li a {
+  font-size: 20px;
+  font-weight: normal;
+}
+.fixed {
+  position: fixed;
+  z-index: 999;
+}
+
+.main {
+  margin-top: 40px;
+  height: auto;
+}
+/*banner*/
+.banner {
+  width: 100%;
+  height: 750px;
+  background-image: url("eye\ of\ god.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.metin {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 72px;
+  background: -webkit-linear-gradient(left, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-weight: bold;
+}
+.metin2 {
+  width: 100%;
+  position: relative;
+  background: -webkit-linear-gradient(right, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 72px;
+  text-align: center;
+}
+.textarea {
+  height: 300px;
+  border-radius: 10px;
+  float: left;
+  transition: all 0.7s ease-in-out;
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 18px;
+}
+img {
+  object-fit: fill;
+  height: 450px;
+}
+.kategori_baslık {
+  top: 0px;
+  width: 100%;
+  margin: auto;
+  font-size: 72px;
+  background: -webkit-linear-gradient(left, rgb(25, 42, 154), rgb(158, 8, 8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-weight: bold;
+}
+
+.kategori {
+  height: 35vw;
+  width: 100%;
+}
+.baslık {
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  top: 40%;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+.baslık a {
+  text-decoration: none;
+  color: #073f43;
+}
+.astronomi {
+  background-image: url("indir4.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -170px 10%;
+}
+.kimya {
+  background-image: url("kimya.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -300px 10%;
+}
+.biyoloji {
+  background-image: url("biyoloji.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -300px 10%;
+}
+.fizik {
+  background-image: url("fizik.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -300px 10%;
+}
+.felsefe {
+  background-image: url("felsefe.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -350px 10%;
+}
+.teknoloji {
+  background-image: url("teknoloji.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: -350px 10%;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #9999;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgb(0 0 0 /30%);
+}
+.blur-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blur {
+  width: 100%;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  transition: 0.2s all;
+}
+.blur-wrap:hover .blur {
+  filter: grayscale(10%);
+  opacity: 0.6;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.blur-wrap:hover .blur:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.son_icerik {
+  height: 40vw;
+  background-color: rgb(0, 0, 0);
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+/*Belirli bir konumdan sonra sabit kalan sütunlar*/
+
+#fixedscroll {
+  position: sticky;
+  top: 46px;
+}
